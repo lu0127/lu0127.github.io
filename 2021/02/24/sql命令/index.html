@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1 字
+      304 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -228,7 +228,17 @@
             
             <div class="markdown-body">
               <hr>
-<h2 id="123"><a href="#123" class="headerlink" title="123"></a>123</h2>
+<p>– 从user表中查询所有列的数据   select * from 表名称<br>–  select * from user;</p>
+<p>– 从user表中查询username和password列中的数据  select 列名称1,列名称2 from 表名称<br>– select username,password from user;</p>
+<p>– 在user表中插入username为lt,password为123456的数据  insert into uesr (列1,列2) values (‘值1’,’值2’)<br>– insert into user (username,password,status) values (‘lt3’,’123456’,1);<br>– select * from user;</p>
+<p>– 在user表中将id为4的用户的,username和password的值更新改变   uplate 表名 set 列1=值1, 列2=值2 where id=值<br> – update user set username=’ll22’, password=’111111’, status=0 where id=4<br>– update user set password=’000000’ where username=’wf’</p>
+<p>– delete from 表名 where 列名称=值<br>– delete from user where id=1 ;<br> select * from user;</p>
+<p>– 演示where字句的运用<br>– select * from user where id=2<br>– select * from user where username = ‘xws’<br>– select * from user where id&gt;=3<br>– select * from user where id between 2 and 4<br>– select * from user where ‘username’ like ‘%c%’</p>
+<p>– select * from user where status=0 and id&gt;3<br>– select * from user where status=0 or id&gt;4 </p>
+<p> – 对user表的数据进行排序 order by     asc为默认的升序排序  desc表示降序排序<br>– select * from user order by status desc;<br>– where 子语句需要写再order by前面<br>– select *from user where id&gt;3 order by id desc;</p>
+<p>– 对user表的数据进行status降序之后根据username进行升序<br>select * from user order by status desc, username  </p>
+<hr>
+
             </div>
             <hr>
             <div>
