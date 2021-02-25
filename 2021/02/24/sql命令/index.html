@@ -22,6 +22,22 @@
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -146,17 +162,50 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="hello world">
+            <span class="h2" id="subtitle" title="">
               
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-24 21:31" pubdate>
+        2021年2月24日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      394 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -165,134 +214,82 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/02/24/sql%E5%91%BD%E4%BB%A4/"></a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/02/24/sql%E5%91%BD%E4%BB%A4/">
-          
-          
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
             
-          
-          
-从user表中查询所有列的数据   select * from 表名称select * from user;
-  从user表中查询username和password列中的数据  select 列名称1,列名称2 from 表名称  select username,password from user;
-  在user表中插入username为lt,password为123456的数据  ins
-        </a>
-      </p>
+            <div class="markdown-body">
+              <hr>
+<p>从user表中查询所有列的数据   select * from 表名称<br>select * from user;</p>
+<p>  从user表中查询username和password列中的数据  select 列名称1,列名称2 from 表名称<br>  select username,password from user;</p>
+<p>  在user表中插入username为lt,password为123456的数据  insert into uesr (列1,列2) values (‘值1’,’值2’)<br>  insert into user (username,password,status) values (‘lt3’,’123456’,1);<br>  select * from user;</p>
+<p>  在user表中将id为4的用户的,username和password的值更新改变   uplate 表名 set 列1=值1, 列2=值2 where id=值<br>   update user set username=’ll22’, password=’111111’, status=0 where id=4<br>  update user set password=’000000’ where username=’wf’</p>
+<p>  delete from 表名 where 列名称=值<br>  delete from user where id=1 ;<br> select * from user;</p>
+<p>  演示where字句的运用<br> 用户限定选择标准,可以使用运算符来选择标准<br>  &lt;,&gt;,!=,=,&lt;=&lt;,&gt;=,between在某个值范围内,like搜索某种模式</p>
+<p>  select * from user where id=2<br>  select * from user where username = ‘xws’<br>  select * from user where id&gt;=3<br>  select * from user where id between 2 and 4<br>  select * from user where ‘username’ like ‘%c%’</p>
+<p>AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。AND 表示必须同时满足多个条件,OR 表示只要满足任意一个条件即可，<br>  select * from user where status=0 and id&gt;3<br>  select * from user where status=0 or id&gt;4 </p>
+<p>   对user表的数据进行排序 order by     asc为默认的升序排序  desc表示降序排序<br>  select * from user order by status desc;<br>  where 子语句需要写再order by前面<br>  select *from user where id&gt;3 order by id desc;</p>
+<p>对user表的数据进行status降序之后根据username进行升序<br>select * from user order by status desc, username  </p>
+<hr>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-24 21:31" pubdate>
-              2021-02-24
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/29/taotao/"></a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/29/taotao/">
-          
-          
-            
-          
-          
-title:搭建data:2021-01-28 20:34:00tags:[blog,hello]categories:搭建博客
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-29 08:44" pubdate>
-              2021-01-29
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/01/29/hello-world/">Hello World</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/01/29/hello-world/">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-01-29 08:44" pubdate>
-              2021-01-29
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/01/29/taotao/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -372,9 +369,15 @@ Quick
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
